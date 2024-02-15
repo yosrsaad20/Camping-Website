@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    box-sizing: border-box;
+    box-sizing:border-box;
     text-decoration: none;
     list-style: none;
 
@@ -12,8 +12,9 @@
     --clair: #fff;
     --dark: #000;
     --gray: #555;
-    --rose: #fc036b;
-    --graylight: #777;
+
+    --green:#0c5e20;   
+ --graylight: #777;
     --l200: 35vmin;
     --l60: 10.5vmin;
     --l50: 8.7vmin;
@@ -27,8 +28,7 @@
     --l10: 1.75vmin;
 }
 html{
-    font-family:  "Ubentu", sans-serif;
-    color:#000000;
+    font-family: "Neucha" ;
     overflow-x: hidden;
 }
 a{
@@ -41,17 +41,19 @@ h1,h2,h3,h4{
     
 }
 .nav{
-    font-family: "Ubentu",sans-serif;
+    font-family: "Neucha";
    display: flex;
    align-items: center;
    justify-content: space-between;
    position: absolute;
    width: 100vw;
    padding: var(--l50);
+   z-index: 1000;
    
 }
 .logo{
-    font-size: var(--l35);
+    color:#fff;
+    font-size: var(--l50);
 }
 .nav-links{
     display: flex;
@@ -59,14 +61,14 @@ h1,h2,h3,h4{
 }
 .nav-links li{
     margin: 0 var(--l30);
-}
+    font-family: "Neucha";}
 .nav-links li:first-child{
     margin-left: 0;
 }
 .nav-links li:last-child{
     margin-right: 0;
 }
-.menu-btn{
+.menu-btn {
     position: absolute;
     top:var(--l50);
     right: var(--l50);
@@ -74,6 +76,7 @@ h1,h2,h3,h4{
     display: none;
     cursor: pointer;
 }
+
 header{
 animation: imageFade 7s infinite alternate;
 background-size: cover;
@@ -83,20 +86,20 @@ display: flex;
 justify-content:center;
 align-items: center;
 flex-direction: column;
-
+z-index: 1;
 }
 @keyframes imageFade {
     0% {
         background-image:url(../img/header5.jpg);
-        opacity: 8;
+        opacity: 7s;
     }
     50% {
         background-image:url(../img/header1.jpg);
-        opacity: 7;
+        opacity: 7s;
     }
     100% {
         background-image:url(../img/header2.jpg);
-        opacity: 7;
+        opacity: 7s;
     }
 
 }
@@ -105,15 +108,16 @@ h1{
     text-align: center;
     font-family: "Protest Revolution",sans-serif;
 }
-h2{
+h3{
     font-size: var(--l40);
     text-align: center;
     margin-bottom: var(--l20);
-   font-family: "Oswald" ;
+   font-family: "Neucha" ;
+   letter-spacing: 0.1em;
 
 }
 .line{
-    background-color:rgb(5, 71, 5);
+    background-color:var(--green);
     width: var(--l200);
     height: 5px;
     border-radius: 5px;
@@ -129,4 +133,233 @@ h2{
 }
 .ctn:hover{
     opacity:0.8s
+}
+/*end header*/
+/*start events*/
+.events{ 
+    height: 100vh;
+ padding-top:10px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.containt {
+    display: flex;
+}
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    
+
+}
+.col img{
+    width: 95%;
+    height: 280px;
+    cursor: pointer;
+    transition: transform 0.7s;
+}
+.col img:hover{
+    transform: scale(1.1);
+}
+.col h4{
+    font-size: 30px;
+    margin: var(--l10);
+    color: var(--green);
+    font-family: "Neucha";
+    letter-spacing: 0.08em;
+}
+.col p{
+    text-align: center;
+    width: 90%;
+    color: var(--graylight);
+    font-family: "Neucha";
+    }
+/*end events*/
+/*start explore*/
+.explore{
+    display: flex;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),var(--dark)),url(../img/img6.jpg);
+    background-size: cover;
+    justify-content: center;
+    background-position: center;
+    height: 100vh;
+    
+}
+.explore .containt{
+    align-items: center;
+justify-content: center;
+ display: flex;
+ flex-direction: column;
+ width: 70%;
+ padding: var(--l50);
+}
+.explore .containt p{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Neucha"
+}
+/*end explore*/
+/*start destination*/
+.tours{
+    padding: 10px;
+    background-color: #e3f5df;
+    
+}
+.tours .containt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding:var(--l50);
+}
+.tours-containt{
+    flex: 40%;
+    
+}
+.tours-image{
+    flex: 60%;
+}
+.galories{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.galories img{
+    width: 45%;
+    height: 250px;
+    margin: 2%;
+}
+/*start footer*/
+footer{
+    margin-top:- var(--30);
+    margin-bottom:- var(--30);
+    }
+.contact{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#e3f5df, rgb(113, 153, 94));
+}
+.contact .social{
+    text-align: center;
+}
+.social .fa{
+    color:var(--gray);
+    border:0.2px solid var(--gray);
+    width: var(--l50);
+    height: var(--l50);
+    line-height: var(--l50);
+    margin:0 10px;
+    font-size: var(--l15);
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.social .fa:hover{
+    background-color: var(--green);
+    border: 0.2px solid transparent;
+    color: var(--clair);
+    transform: translateY(-7px);
+}
+.bar{
+    text-align: center;
+    color: var(--dark);
+    margin: var(--l20) auto;
+}
+#back-to-top{
+    position: fixed;
+    bottom: var(--l10);
+    right:var(--l10);
+    z-index: 99;
+    font-size: var(--l10);
+    border: none;
+    outline: none;
+    background-color:var(--green);
+    cursor: pointer;
+    padding: var(--l15);
+    
+}
+#back-to-top:hover{
+    opacity: 0.8;
+}
+/* Pour les appareils mobiles */
+@media only screen and (max-width:1000px){
+    .nav{
+padding: 0;
+    }
+.menu-btn {
+    display: block;
+    
+}
+.logo{
+    position: absolute;
+    top: var(--l50);
+    left: var(--l50);
+
+}
+.nav-links{
+    flex-direction:column ;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-image: linear-gradient(rgba(6,6,6,0.497),rgba(65,56,56,0));
+backdrop-filter: blur(10px);
+border-top-right-radius: 40vmin;
+margin-left: -1200px;
+transition: all 2.5s ease;
+}
+.nav-links li{
+    margin: var(--l30) 0;
+text-align: center;
+
+}
+.nav-links li:hover{
+    color: #0c5e20;
+    transform: translateY(-7px);
+}
+.mobile-menu{
+    margin-left: 0;
+}
+.nav-links li a{
+    background-color: transparent;
+}
+h1{
+    font-size: var(--l40);
+}
+h3{
+    font-size: var(--l30);
+}
+section{
+    margin: auto;
+    
+    
+}
+.events{
+     margin: 200px 2px;
+    }
+
+.col img:hover{
+transform: none;
+cursor: pointer;
+}
+.events .containt{
+    display: inline-block;
+    
+}
+.col img, p{
+    min-width: 100%;
+
+}
+.explore .containt{
+    width:100%;
+    }
+.galories img{
+    margin: 1%;
+}
 }
