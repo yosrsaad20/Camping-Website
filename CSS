@@ -134,8 +134,10 @@ h3{
 .ctn:hover{
     opacity:0.8s
 }
+
 /*end header*/
 /*start events*/
+
 .events{ 
     height: 100vh;
  padding-top:10px;
@@ -363,3 +365,5 @@ cursor: pointer;
     margin: 1%;
 }
 }
+
+
